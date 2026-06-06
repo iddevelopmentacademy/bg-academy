@@ -586,8 +586,9 @@ footer{background:var(--navy3);padding:56px 64px 24px;}
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a onclick="go('home')"     id="nav-home">Начало</a></li>
-    <li><a onclick="go('courses')"  id="nav-courses">Курсове</a></li>
-    <li><a onclick="go('news')"     id="nav-news">Новини</a></li>
+    <li><a onclick="go('courses')"   id="nav-courses">Курсове с КК</a></li>
+    <li><a onclick="go('trainings')" id="nav-trainings">Обучения</a></li>
+    <li><a onclick="go('news')"      id="nav-news">Новини</a></li>
     <li><a onclick="go('about')"    id="nav-about">За нас</a></li>
     <li><a onclick="go('gdpr')"     id="nav-gdpr">GDPR</a></li>
     <li><a onclick="go('contact')"  id="nav-contact" class="nav-cta">Запиши се</a></li>
@@ -709,6 +710,82 @@ footer{background:var(--navy3);padding:56px 64px 24px;}
 </div>
 
 </div><!-- /page-home -->
+
+<!-- ═════════════ PAGE: TRAININGS ═════════════ -->
+<div class="page" id="page-trainings">
+<div style="padding-top:72px;">
+<section class="section section-blue">
+  <div class="section-header">
+    <div class="eyebrow">Специализирани обучения</div>
+    <h2 class="section-title">Обучения <span class="accent">без КК</span></h2>
+    <p class="section-sub">Практически курсове за реалния учебен процес — без квалификационни кредити, с максимална практическа стойност.</p>
+  </div>
+
+  <!-- TRAINING CARD: AI -->
+  <div class="courses-grid">
+    <div class="course-card" data-cat="ai" style="max-width:720px;margin:0 auto;">
+      <div class="card-top" style="background:linear-gradient(135deg,#0f1e30,#1a2e4a);">
+        <div class="card-num">Обучение 01</div>
+        <div class="card-title">Практическо използване на AI за учители и училищен персонал</div>
+        <div class="card-badge" style="background:linear-gradient(135deg,#b8821e,#d4993a);">Erasmus+</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc" style="font-size:14px;margin-bottom:20px;">
+          Реални инструменти, практични приложения и готови решения за ежедневната работа в училище.
+          Подходящо за Erasmus+ мобилности.
+        </p>
+
+        <!-- BENEFITS -->
+        <div style="background:var(--blue-xl);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:16px;">
+          <div class="cfg-label" style="margin-bottom:12px;">Ще получите</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);">
+              <span style="flex-shrink:0;width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:11px;font-weight:700;">1</span>
+              AI инструменти за планиране и преподаване
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);">
+              <span style="flex-shrink:0;width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:11px;font-weight:700;">2</span>
+              Автоматизация на документи, отчети и комуникация
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);">
+              <span style="flex-shrink:0;width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:11px;font-weight:700;">3</span>
+              Практически упражнения и готови шаблони
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);">
+              <span style="flex-shrink:0;width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:11px;font-weight:700;">4</span>
+              Подходящо за учители, директори и административен персонал
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-tags">
+          <span class="ctag">🤖 AI</span>
+          <span class="ctag">🌍 Erasmus+</span>
+          <span class="ctag">💻 Дигитални умения</span>
+          <span class="ctag">👩‍🏫 Учители</span>
+          <span class="ctag">🏫 Директори</span>
+        </div>
+      </div>
+      <div class="card-foot" style="justify-content:space-between;align-items:center;">
+        <span style="font-size:12px;color:var(--muted);">Свържете се за информация и групи</span>
+        <button class="enroll-btn" style="background:linear-gradient(135deg,var(--gold),var(--gold2));" onclick="openEnroll('Практическо използване на AI за учители и училищен персонал')">Заявете информация →</button>
+      </div>
+    </div>
+  </div><!-- /courses-grid -->
+</section>
+
+<div class="cta-band">
+  <div class="cta-eyebrow">Интересувате се?</div>
+  <h2 class="cta-title">Свържете се с нас за повече информация</h2>
+  <p class="cta-sub">Провеждаме обучения за индивидуални участници и за цели екипи.</p>
+  <div class="cta-btns">
+    <button class="btn-gold" onclick="go('contact')">Свържи се с нас</button>
+    <button class="btn-outline" style="border-color:rgba(255,255,255,.4);color:var(--white);" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='transparent'" onclick="go('courses')">Курсове с КК</button>
+  </div>
+</div>
+
+</div><!-- /padding -->
+</div><!-- /page-trainings -->
 
 <!-- ═════════════ PAGE: COURSES ═════════════ -->
 <div class="page" id="page-courses">
@@ -1349,7 +1426,8 @@ footer{background:var(--navy3);padding:56px 64px 24px;}
       <div class="foot-col-title">Навигация</div>
       <ul class="foot-links">
         <li><a onclick="go('home')">Начало</a></li>
-        <li><a onclick="go('courses')">Курсове</a></li>
+        <li><a onclick="go('courses')">Курсове с КК</a></li>
+        <li><a onclick="go('trainings')">Обучения</a></li>
         <li><a onclick="go('news')">Новини</a></li>
         <li><a onclick="go('about')">За нас</a></li>
         <li><a onclick="go('contact')">Контакти</a></li>
