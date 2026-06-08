@@ -469,6 +469,24 @@ h2.section-title .accent{color:var(--gold);}
 .form-ok small{font-size:12px;color:var(--muted);margin-top:6px;display:block;}
 
 /* ═══════════════════════════
+   ARTICLE GALLERY
+═══════════════════════════ */
+.art-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0;}
+.art-gallery-img{width:100%;height:230px;object-fit:cover;border-radius:12px;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .3s;}
+.art-gallery-img:hover{transform:scale(1.02);}
+.art-gallery-single{margin:28px 0;}
+.art-gallery-single img{width:100%;max-height:360px;object-fit:cover;border-radius:12px;border:1px solid var(--border);box-shadow:var(--sh);}
+.art-info-box{background:var(--blue-xl);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:16px 20px;margin:24px 0;display:flex;gap:24px;flex-wrap:wrap;}
+.art-info-item{display:flex;flex-direction:column;gap:3px;}
+.art-info-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.art-info-val{font-size:13px;color:var(--navy);font-weight:600;}
+@media(max-width:900px){
+  .art-gallery{grid-template-columns:1fr;}
+  .art-gallery-img{height:200px;}
+  .art-info-box{flex-direction:column;gap:14px;}
+}
+
+/* ═══════════════════════════
    GDPR
 ═══════════════════════════ */
 .gdpr-page{padding:120px 64px 90px;max-width:800px;}
@@ -1188,7 +1206,18 @@ footer{background:var(--navy3);padding:56px 64px 24px;}
     <h2 class="section-title">Актуално от <span class="accent">Академията</span></h2>
     <p class="section-sub">Статии, съвети и новини за педагогическите специалисти.</p>
   </div>
-  <div class="news-grid"><div class="news-card" onclick="openArticle('a1')">
+  <div class="news-grid"><div class="news-card" onclick="openArticle('a7')">
+  <div class="news-img" style="background-image:url('images/training-debren-2026/photo1.jpg');background-size:cover;background-position:center top;">
+    <span class="news-date">22 Май 2026</span>
+  </div>
+  <div class="news-body">
+    <div class="news-cat">Проведено обучение</div>
+    <div class="news-title">Съвременни технологии за преподаване — ОбУ „Св. Климент Охридски"</div>
+    <p class="news-exc">ID Development Academy проведе вътрешно-училищна квалификация в с. Дебрен. Над 25 педагози се запознаха с AI инструменти и съвременни практики за преподаване.</p>
+  </div>
+  <div class="news-foot"><span class="read-more">Прочети →</span></div>
+</div>
+<div class="news-card" onclick="openArticle('a1')">
   <div class="news-img"><span class="news-emoji">📚</span><span class="news-date">15 Май 2026</span></div>
   <div class="news-body">
     <div class="news-cat">Педагогика</div>
@@ -1538,6 +1567,47 @@ function sendForm(e){
 // ARTICLES
 
 const ART={
+a7:{cat:'Проведено обучение',title:'Съвременни технологии за преподаване — ОбУ „Св. Климент Охридски", с. Дебрен',meta:'22 Май 2026 • Вътрешно-училищна квалификация',body:`
+<div class="art-info-box">
+  <div class="art-info-item"><span class="art-info-label">Дата</span><span class="art-info-val">22 май 2026 г.</span></div>
+  <div class="art-info-item"><span class="art-info-label">Организация</span><span class="art-info-val">ID Development Academy</span></div>
+  <div class="art-info-item"><span class="art-info-label">Домакин</span><span class="art-info-val">ОбУ „Св. Климент Охридски", с. Дебрен</span></div>
+  <div class="art-info-item"><span class="art-info-label">Формат</span><span class="art-info-val">Вътрешно-училищна квалификация</span></div>
+  <div class="art-info-item"><span class="art-info-label">Участници</span><span class="art-info-val">25+ педагози</span></div>
+</div>
+
+<p>На <strong>22 май 2026 г.</strong> ID Development Academy проведе вътрешно-училищна квалификация в ОбУ „Св. Климент Охридски", с. Дебрен, Благоевград. Тема на обучението: <strong>„Съвременни технологии за преподаване"</strong>.</p>
+
+<p>В квалификацията взеха участие над 25 учители и членове на педагогическия екип на училището — предметни учители, класни ръководители, директорът и административният персонал.</p>
+
+<div class="art-gallery">
+  <img src="images/training-debren-2026/photo1.jpg" alt="Обучение по NotebookLM — ОбУ Дебрен" class="art-gallery-img">
+  <img src="images/training-debren-2026/photo2.jpg" alt="ID Development Academy — презентация" class="art-gallery-img">
+</div>
+
+<h2>Теми на обучението</h2>
+<p>Квалификацията обхвана практическото приложение на изкуствения интелект и съвременните дигитални инструменти в учебната среда. Акцентът беше поставен върху решения с реална приложимост в ежедневната работа на учителя:</p>
+<ul>
+  <li><strong>NotebookLM</strong> — AI инструмент на Google за работа с документи, учебни материали и изследователска дейност в класа</li>
+  <li>Практически подходи за автоматизация на подготовката на уроци</li>
+  <li>Дигитални ресурси за учители, директори и административен персонал</li>
+  <li>Съвременни методи в комуникацията с ученици и родители чрез технологии</li>
+</ul>
+
+<div class="art-gallery">
+  <img src="images/training-debren-2026/photo3.jpg" alt="Практическа сесия по NotebookLM" class="art-gallery-img">
+  <img src="images/training-debren-2026/photo4.jpg" alt="Педагогически екип по време на квалификацията" class="art-gallery-img">
+</div>
+
+<h2>Реакцията на участниците</h2>
+<p>Обучението предизвика активен интерес и дискусии сред педагогическия екип. Участниците споделиха, че инструментите, представени по време на квалификацията, са лесни за прилагане и имат пряк ефект върху качеството на преподаване.</p>
+
+<blockquote>„Провеждането на обучения директно в училищната среда е най-ефективният начин знанието да стигне до целия педагогически екип едновременно." — Елмира Бекирова, ID Development Academy</blockquote>
+
+<h2>За ID Development Academy</h2>
+<p>ID Development Academy е акредитирана организация за квалификация на педагогически специалисти (МОН, Наредба №15/2019) и активен партньор по програма Erasmus+ (OID: E10378599). Провеждаме обучения в училище, онлайн и изнесено — за индивидуални учители и за цели педагогически екипи.</p>
+<p>За информация относно следващи вътрешно-училищни квалификации се свържете с нас на <strong>0894 416 627</strong> или на <strong>iddevelopmentacademy@gmail.com</strong>.</p>
+`},
 a1:{cat:'Педагогика',title:'10 иновативни метода за по-ангажирана класна стая',meta:'15 Май 2026 • 7 мин.',body:`
 <p>Учителите навсякъде се изправят пред общо предизвикателство: как да задържат вниманието на учениците в дигиталната епоха. Изследванията показват, че активните методи увеличават запаметяването с до 75%.</p>
 <h2>1. Игровизация (Gamification)</h2>
